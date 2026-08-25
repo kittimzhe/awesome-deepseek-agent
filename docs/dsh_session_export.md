@@ -4,6 +4,8 @@
 
 dsh-session-export is an open-source plugin for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH) — DeepSeek's official agent runtime. It adds a `/transcript` command that exports a finished or running session as a human-readable transcript written directly to a host path. Where the shipped export tooling downloads a raw log ZIP through the browser, this plugin renders what you actually read: the full message flow, tool calls with editor diffs, subagent lineage, and token totals — as Markdown and/or JSON, through any `ctx.sessionQuery` persistence backend (JSONL, SQLite, …).
 
+
+- **GitHub:** <https://github.com/kittimzhe/dsh-session-export>
 #### 1. Prerequisite: a DeepSeek Harness installation
 
 This is an out-of-tree DSH plugin, so it rides on an existing [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) setup. No extra API key or model configuration — it reads sessions through DSH's own query engine and inherits whatever provider your harness already uses.
