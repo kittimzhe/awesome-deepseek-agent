@@ -4,6 +4,8 @@
 
 dsh-session-export 是一款面向 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH，DeepSeek 官方 Agent 运行时）的开源插件。它新增 `/transcript` 命令，把已结束或正在运行的会话导出为人类可读的转录，直接写入 Host 文件系统路径。官方自带导出工具走浏览器下载原始日志 ZIP，而本插件渲染的是你真正读到的内容：完整消息流、带编辑器 diff 的工具调用、子代理谱系与 token 汇总 —— 以 Markdown 和/或 JSON 输出，兼容 `ctx.sessionQuery` 之后的任意持久化后端（JSONL、SQLite……）。
 
+
+- **GitHub:** <https://github.com/kittimzhe/dsh-session-export>
 #### 1. 前置条件：DeepSeek Harness 环境
 
 本插件是 DSH 的树外插件，需要已有的 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 环境。无需额外申请 API Key 或配置模型 —— 它通过 DSH 自带的会话查询引擎读取数据，沿用你的 Harness 已配置的模型提供方。
